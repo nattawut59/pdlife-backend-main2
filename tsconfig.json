@@ -1,0 +1,29 @@
+{
+  // คอนฟิกของ "ทั้งโปรเจกต์" — ตัวแก้ไขโค้ดหยิบไฟล์นี้เป็นค่าเริ่มต้น จึงต้องครอบทุกไฟล์ .ts
+  // ที่เราเขียน ไม่ใช่แค่ src ไม่งั้น tests/ กับ scripts/ จะไม่อยู่ในโปรเจกต์ไหนเลย แล้ว
+  // TypeScript จะถอยไปใช้ค่าเริ่มต้น (target ES5) แล้วขึ้น error ปลอมเต็มไปหมด
+  //
+  // ส่วนการบิลด์จริงอยู่ใน tsconfig.build.json ซึ่งคอมไพล์เฉพาะ src ลง dist
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "CommonJS",
+    // TypeScript 5 เปลี่ยนชื่อค่านี้จาก "node" เป็น "node10" (พฤติกรรมเหมือนเดิมทุกอย่าง)
+    // ชื่อเก่ายังใช้ได้แต่จะถูกถอดออกใน TypeScript 6
+    "moduleResolution": "node10",
+    "rootDir": ".",
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src", "tests", "scripts"],
+  "exclude": ["node_modules", "dist"]
+}

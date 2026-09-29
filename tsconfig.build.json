@@ -1,0 +1,11 @@
+{
+  // คอนฟิกสำหรับบิลด์เท่านั้น — คอมไพล์เฉพาะ src ลง dist ไม่เอา tests กับ scripts ติดไปด้วย
+  // (ตัวแก้ไขโค้ดไม่ได้ใช้ไฟล์นี้ มันใช้ tsconfig.json)
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "noEmit": false
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,40 @@
+import { Router } from "express";
+import authRoutes from "./authRoutes";
+import appointmentRoutes from "./appointmentRoutes";
+import patientRoutes from "./patientRoutes";
+import caregiverRoutes from "./caregiverRoutes";
+import caregiverInviteRoutes from "./caregiverInviteRoutes";
+import medicationRoutes from "./medicationRoutes";
+import prescriptionRoutes from "./prescriptionRoutes";
+import medicationLogRoutes from "./medicationLogRoutes";
+import roundRoutes from "./roundRoutes";
+import deviceRoutes from "./deviceRoutes";
+import notificationRoutes from "./notificationRoutes";
+import dashboardRoutes from "./dashboardRoutes";
+import redFlagRoutes from "./redFlagRoutes";
+import userRoutes from "./userRoutes";
+import auditLogRoutes from "./auditLogRoutes";
+import questionBankRoutes from "./questionBankRoutes";
+import consentRoutes from "./consentRoutes";
+
+const router = Router();
+
+router.use("/auth", authRoutes);
+router.use("/appointments", appointmentRoutes);
+router.use("/patients", patientRoutes);
+router.use("/caregivers", caregiverRoutes);
+router.use("/caregiver-invites", caregiverInviteRoutes);
+router.use("/medications", medicationRoutes);
+router.use("/prescriptions", prescriptionRoutes);
+router.use("/medication-logs", medicationLogRoutes);
+router.use("/rounds", roundRoutes);
+router.use("/devices", deviceRoutes);
+router.use("/notifications", notificationRoutes);
+router.use("/dashboard", dashboardRoutes);
+router.use("/red-flags", redFlagRoutes);
+router.use("/users", userRoutes);
+router.use("/audit-logs", auditLogRoutes);
+router.use("/question-bank", questionBankRoutes);
+router.use("/consents", consentRoutes);
+
+export default router;

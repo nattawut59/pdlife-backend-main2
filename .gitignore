@@ -1,0 +1,16 @@
+node_modules/
+dist/
+# กัน env ทุกตัวไว้ก่อน แล้วค่อยเปิดเฉพาะตัวที่ยืนยันแล้วว่าไม่มีค่าจริง
+.env*
+!.env.example
+!.env.test
+
+*.log
+.DS_Store
+
+# Bootstrap admin credentials — generated locally by seed/gen_admin.mjs, never committed.
+seed/admin.generated.sql
+
+# Python bytecode cache, left behind by running seed/gen_seed.py.
+__pycache__/
+*.pyc
